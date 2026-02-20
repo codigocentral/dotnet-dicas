@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option csharp_namespace = "Dica56_gRPC";
+
+package greet;
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  
+  // Sends multiple greetings
+  rpc SayHelloServerStreaming (HelloRequest) returns (stream HelloReply);
+  
+  // Receives multiple greetings
+  rpc SayHelloClientStreaming (stream HelloRequest) returns (HelloReply);
+  
+  // Bidirectional streaming
+  rpc SayHelloBidirectional (stream HelloRequest) returns (stream HelloReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+  int32 count = 2;
+  string timestamp = 3;
+}

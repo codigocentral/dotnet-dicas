@@ -1,0 +1,46 @@
+﻿{
+  Application: {
+    Name: E-commerce API,
+    Version: 2.1.0,
+    Environment: Production
+  },
+  Database: {
+    Provider: PostgreSQL,
+    ConnectionString: {Scrubbed},
+    PoolSize: 100,
+    CommandTimeout: 30
+  },
+  Cache: {
+    Provider: Redis,
+    Host: redis-cluster.internal,
+    DefaultTtl: 00:30:00,
+    KeyPrefix: ecomm:
+  },
+  Security: {
+    JwtSecret: {Scrubbed},
+    TokenExpiry: 1.00:00:00,
+    AllowedOrigins: [
+      https://app.ecommerce.com,
+      https://admin.ecommerce.com
+    ],
+    RequireHttps: true
+  },
+  Features: {
+    Analytics: {
+      Provider: Google Analytics,
+      TrackingId: GA-123456
+    },
+    EmailService: {
+      Provider: SendGrid,
+      ApiKey: {Scrubbed}
+    },
+    Monitoring: {
+      Provider: Application Insights,
+      ConnectionString: {Scrubbed}
+    },
+    PaymentGateway: {
+      Provider: Stripe,
+      PublicKey: pk_live_xyz
+    }
+  }
+}

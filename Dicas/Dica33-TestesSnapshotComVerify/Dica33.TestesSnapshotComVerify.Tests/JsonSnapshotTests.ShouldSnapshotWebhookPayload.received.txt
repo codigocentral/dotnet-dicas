@@ -1,0 +1,46 @@
+﻿{
+  EventType: order.completed,
+  EventId: {Scrubbed},
+  Timestamp: DateTime_1,
+  Data: {
+    Order: {
+      Id: 1001,
+      Status: completed,
+      Customer: {
+        Id: 123,
+        Email: customer@email.com,
+        Name: João Silva
+      },
+      Items: [
+        {
+          ProductId: 1,
+          Quantity: 2,
+          Price: 100.00
+        },
+        {
+          ProductId: 2,
+          Quantity: 1,
+          Price: 50.00
+        }
+      ],
+      Payment: {
+        Method: credit_card,
+        Amount: 250.00,
+        Currency: BRL,
+        Status: paid,
+        TransactionId: {Scrubbed}
+      },
+      Shipping: {
+        Method: express,
+        Cost: 20.00,
+        EstimatedDelivery: DateTime_2,
+        TrackingCode: {Scrubbed}
+      }
+    }
+  },
+  Signature: {Scrubbed},
+  Delivery: {
+    AttemptNumber: 1,
+    MaxAttempts: 3
+  }
+}

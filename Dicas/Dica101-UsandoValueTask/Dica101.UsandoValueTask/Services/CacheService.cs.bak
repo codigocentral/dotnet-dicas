@@ -1,0 +1,73 @@
+namespace Dica08;
+
+/// <summary>
+/// Serviço que demonstra o uso prático de Records em cenários reais
+/// </summary>
+public interface IPersonService
+{
+    Person CreatePerson(string firstName, string lastName, int age, string email);
+    Person UpdatePersonAge(Person person, int newAge);
+    Person UpdatePersonEmail(Person person, string newEmail);
+    bool ArePersonsEqual(Person person1, Person person2);
+    string GetPersonInfo(Person person);
+    IEnumerable<Person> FilterAdults(IEnumerable<Person> persons);
+}
+
+/// <summary>
+/// Implementação que mostra as vantagens dos Records
+/// </summary>
+public class PersonService : IPersonService
+{
+    private readonly ILogger<PersonService> _logger;
+
+    public PersonService(ILogger<PersonService> logger)
+    {
+        _logger = logger;
+    }
+
+    public Person CreatePerson(string firstName, string lastName, int age, string email)
+    {
+        _logger.LogInformation("Criando pessoa: {FirstName} {LastName}", firstName, lastName);
+        
+        // Record construction é simples e clara
+        return new Person(firstName, lastName, age, email);
+    }
+
+    public Person UpdatePersonAge(Person person, int newAge)
+    {
+        _logger.LogInformation("Atualizando idade de {FullName} para {NewAge}", person.FullName, newAge);
+        
+        // Usando expressão 'with' para imutabilidade
+        return person with { Age = newAge };
+    }
+
+    public Person UpdatePersonEmail(Person person, string newEmail)
+    {
+        _logger.LogInformation("Atualizando email de {FullName} para {NewEmail}", person.FullName, newEmail);
+        
+        // Método específico do record que usa 'with' internamente
+        return person.ChangeEmail(newEmail);
+    }
+
+    public bool ArePersonsEqual(Person person1, Person person2)
+    {
+        _logger.LogInformation("Comparando pessoas: {Person1} e {Person2}", person1, person2);
+        
+        // Comparação por valor automática
+        return person1 == person2;
+    }
+
+    public string GetPersonInfo(Person person)
+    {
+        // ToString() automático dos records
+        return person.ToString();
+    }
+
+    public IEnumerable<Person> FilterAdults(IEnumerable<Person> persons)
+    {
+        _logger.LogInformation("Filtrando pessoas adultas");
+        
+        // Usando propriedade calculada do record
+        return persons.Where(p => p.IsAdult);
+    }
+}

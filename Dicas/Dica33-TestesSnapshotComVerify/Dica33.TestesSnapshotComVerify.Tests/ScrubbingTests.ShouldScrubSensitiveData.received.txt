@@ -1,0 +1,40 @@
+﻿{
+  Id: 123,
+  Username: joao.silva,
+  Email: joao.silva@email.com,
+  PasswordHash: {Scrubbed},
+  Salt: {Scrubbed},
+  PersonalInfo: {
+    FullName: João da Silva Santos,
+    CPF: {Scrubbed},
+    Phone: {Scrubbed},
+    BirthDate: {Scrubbed},
+    Address: {
+      Street: Rua das Flores, 123,
+      City: São Paulo,
+      State: SP,
+      ZipCode: 01234-567,
+      Country: Brasil
+    }
+  },
+  PaymentInfo: {
+    CreditCards: [
+      {
+        Id: 1,
+        LastFourDigits: 1234,
+        Brand: Visa,
+        ExpiryMonth: 12,
+        ExpiryYear: 2025,
+        Token: {Scrubbed}
+      }
+    ],
+    DefaultPaymentMethod: credit_card_1
+  },
+  ApiKeys: [
+    {
+      Name: main_api_key,
+      Key: {Scrubbed},
+      CreatedAt: {Scrubbed}
+    }
+  ]
+}

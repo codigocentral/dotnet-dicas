@@ -1,0 +1,29 @@
+﻿{
+  Environment: Production,
+  Server: {
+    Hostname: {Scrubbed},
+    ProcessId: {Scrubbed},
+    WorkingDirectory: {Scrubbed},
+    UserName: {Scrubbed},
+    OSVersion: Unix 15.5.0,
+    MemoryUsage: {Scrubbed},
+    UpTime: {Scrubbed}
+  },
+  Database: {
+    ConnectionString: ,
+    ActiveConnections: {Scrubbed},
+    LastBackup: {Scrubbed},
+    Version: PostgreSQL 15.2
+  },
+  Cache: {
+    RedisHost: redis-cluster.internal.com:6379,
+    HitRate: 89.5,
+    UsedMemory: 2.1GB,
+    LastFlush: {Scrubbed}
+  },
+  Monitoring: {
+    ApplicationInsightsKey: {Scrubbed},
+    DatadogApiKey: {Scrubbed},
+    NewRelicLicense: {Scrubbed}
+  }
+}

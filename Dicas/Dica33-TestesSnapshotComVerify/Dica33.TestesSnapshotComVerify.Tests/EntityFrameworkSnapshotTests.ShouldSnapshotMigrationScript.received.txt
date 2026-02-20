@@ -1,0 +1,33 @@
+﻿{
+  Version: 20240115_AddUserPreferences,
+  UpScript:
+-- Add UserPreferences table
+CREATE TABLE UserPreferences (
+    Id int NOT NULL IDENTITY(1,1),
+    UserId int NOT NULL,
+    Theme nvarchar(50) NOT NULL DEFAULT 'light',
+    Language nvarchar(10) NOT NULL DEFAULT 'en-US',
+    Notifications bit NOT NULL DEFAULT 1,
+    CreatedAt datetime2 NOT NULL DEFAULT GETUTCDATE(),
+    UpdatedAt datetime2 NOT NULL DEFAULT GETUTCDATE(),
+    CONSTRAINT PK_UserPreferences PRIMARY KEY (Id),
+    CONSTRAINT FK_UserPreferences_Users_UserId FOREIGN KEY (UserId) REFERENCES Users (Id) ON DELETE CASCADE
+);
+
+-- Add index for faster lookups
+CREATE UNIQUE INDEX IX_UserPreferences_UserId ON UserPreferences (UserId);
+
+-- Add default preferences for existing users
+INSERT INTO UserPreferences (UserId, Theme, Language, Notifications)
+SELECT Id, 'light', 'en-US', 1 FROM Users;,
+  DownScript:
+-- Remove UserPreferences table
+DROP TABLE UserPreferences;,
+  AffectedTables: [
+    UserPreferences,
+    Users
+  ],
+  EstimatedExecutionTime: < 1 second,
+  DataLossWarning: false,
+  RequiresDowntime: false
+}

@@ -1,0 +1,6 @@
+@Dica15.CancellationTokens_HostAddress = http://localhost:5170
+
+GET {{Dica15.CancellationTokens_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

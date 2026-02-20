@@ -1,0 +1,52 @@
+﻿[
+  {
+    Name: João Silva,
+    Email: joao@gmail.com,
+    IsActive: true,
+    Orders: [
+      {
+        UserId: 1,
+        Products: [
+          {
+            Name: Notebook,
+            Price: 2500.00,
+            Category: Electronics
+          },
+          {
+            Name: Mouse,
+            Price: 50.00,
+            Category: Electronics
+          }
+        ],
+        OrderDate: DateTime_1,
+        Status: ,
+        TotalAmount: 2550.00
+      }
+    ]
+  },
+  {
+    Name: Maria Santos,
+    Email: maria@hotmail.com,
+    IsActive: true,
+    Orders: [
+      {
+        UserId: 2,
+        Products: [
+          {
+            Name: Mouse,
+            Price: 50.00,
+            Category: Electronics
+          },
+          {
+            Name: Book,
+            Price: 25.00,
+            Category: Education
+          }
+        ],
+        OrderDate: DateTime_2,
+        Status: ,
+        TotalAmount: 75.00
+      }
+    ]
+  }
+]

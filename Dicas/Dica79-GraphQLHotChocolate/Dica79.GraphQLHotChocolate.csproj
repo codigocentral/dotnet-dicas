@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Dica79.GraphQLHotChocolate</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <EnableHotReload>true</EnableHotReload>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- HotChocolate GraphQL Server -->
+    <PackageReference Include="HotChocolate.AspNetCore" Version="14.1.0" />
+    <PackageReference Include="HotChocolate.Data" Version="14.1.0" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.1.0" />
+    <PackageReference Include="HotChocolate.Subscriptions" Version="14.1.0" />
+    <PackageReference Include="HotChocolate.Subscriptions.InMemory" Version="14.1.0" />
+    
+    <!-- Entity Framework Core -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
+    
+    <!-- Authentication and Authorization -->
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.2.0" />
+    
+    <!-- Additional utilities -->
+    <PackageReference Include="Bogus" Version="35.6.1" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+  </ItemGroup>
+
+</Project>

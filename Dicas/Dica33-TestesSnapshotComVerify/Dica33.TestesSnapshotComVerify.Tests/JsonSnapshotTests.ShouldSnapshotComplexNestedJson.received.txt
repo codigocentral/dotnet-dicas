@@ -1,0 +1,96 @@
+﻿{
+  Metadata: {
+    Version: 1.0,
+    CreatedBy: System,
+    CreatedAt: DateTime_1,
+    Tags: [
+      production,
+      api,
+      v2
+    ]
+  },
+  Data: {
+    Users: [
+      {
+        Id: 1,
+        Profile: {
+          PersonalInfo: {
+            Name: Ana Silva,
+            Age: 28,
+            Country: Brasil
+          },
+          Preferences: {
+            Language: pt-BR,
+            Currency: BRL,
+            Notifications: {
+              Email: true,
+              Push: false,
+              SMS: true
+            }
+          },
+          Activity: {
+            LastLogin: DateTime_2,
+            TotalOrders: 5,
+            TotalSpent: 1250.99,
+            FavoriteCategories: [
+              Electronics,
+              Books,
+              Home
+            ]
+          }
+        }
+      },
+      {
+        Id: 2,
+        Profile: {
+          PersonalInfo: {
+            Name: Carlos Santos,
+            Age: 35,
+            Country: Brasil
+          },
+          Preferences: {
+            Language: pt-BR,
+            Currency: BRL,
+            Notifications: {
+              Email: false,
+              Push: true,
+              SMS: false
+            }
+          },
+          Activity: {
+            LastLogin: DateTime_3,
+            TotalOrders: 12,
+            TotalSpent: 2890.45,
+            FavoriteCategories: [
+              Sports,
+              Electronics
+            ]
+          }
+        }
+      }
+    ],
+    Summary: {
+      TotalUsers: 2,
+      ActiveUsers: 2,
+      TotalRevenue: 4141.44,
+      AverageOrderValue: 243.61,
+      TopCategories: [
+        {
+          Category: Electronics,
+          Orders: 8,
+          Revenue: 2100.00
+        },
+        {
+          Category: Books,
+          Orders: 3,
+          Revenue: 240.00
+        },
+        {
+          Category: Sports,
+          Orders: 6,
+          Revenue: 1801.44
+        }
+      ]
+    }
+  }
+}

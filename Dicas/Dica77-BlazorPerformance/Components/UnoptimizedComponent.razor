@@ -1,0 +1,12 @@
+<div class="component-wrapper">
+    <div class="item-card p-2 mb-1 border rounded">
+        <div class="d-flex justify-content-between">
+            <span>@Item.Description</span>
+            <small class="text-muted">@DateTime.Now.ToString("HH:mm:ss.fff")</small>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public ListItem Item { get; set; } = default!;
+}

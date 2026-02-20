@@ -1,0 +1,57 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bem-vindo ao E-Commerce!</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        .container { max-width: 600px; margin: 0 auto; background-color: white; }
+        .header { background-color: #3498db; color: white; padding: 20px; text-align: center; }
+        .content { padding: 30px; }
+        .button { display: inline-block; padding: 12px 24px; background-color: #e74c3c; color: white; text-decoration: none; border-radius: 4px; }
+        .footer { background-color: #ecf0f1; padding: 20px; text-align: center; font-size: 12px; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bem-vindo ao E-Commerce!</h1>
+        </div>
+        
+        <div class="content">
+            <h2>Olá, João Silva!</h2>
+            
+            <p>Seja muito bem-vindo à nossa plataforma de e-commerce! Estamos muito felizes em tê-lo conosco.</p>
+            
+            <p>Sua conta foi criada com sucesso usando o e-mail <strong>joao@email.com</strong>.</p>
+            
+            <p>Agora você pode:</p>
+            <ul>
+                <li>Navegar por nosso catálogo de produtos</li>
+                <li>Adicionar itens aos favoritos</li>
+                <li>Fazer pedidos com entrega rápida</li>
+                <li>Acompanhar seus pedidos em tempo real</li>
+                <li>Participar de promoções exclusivas</li>
+            </ul>
+            
+            <p>Para começar, que tal dar uma olhada em nossos produtos mais vendidos?</p>
+            
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="#" class="button">Explorar Produtos</a>
+            </p>
+            
+            <p>Se você tiver alguma dúvida, nossa equipe de suporte está sempre disponível para ajudar.</p>
+            
+            <p>Mais uma vez, seja bem-vindo!</p>
+            
+            <p>Atenciosamente,<br>Equipe E-Commerce</p>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 E-Commerce Ltda. Todos os direitos reservados.</p>
+            <p>Se você não deseja mais receber estes e-mails, <a href="#">clique aqui</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

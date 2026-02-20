@@ -1,0 +1,32 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Relatório do Usuário #1</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { background-color: #f0f0f0; padding: 10px; }
+        .content { margin: 20px 0; }
+        .footer { font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Relatório do Usuário</h1>
+        <p>ID: 1</p>
+    </div>
+    <div class="content">
+        <h2>Informações Gerais</h2>
+        <p>Este é um relatório gerado automaticamente.</p>
+        
+        <h2>Estatísticas</h2>
+        <ul>
+            <li>Total de pedidos: 5</li>
+            <li>Valor total gasto: R$ 1.250,00</li>
+            <li>Último acesso: 2024-01-20</li>
+        </ul>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+</html>

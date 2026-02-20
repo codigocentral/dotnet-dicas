@@ -1,0 +1,17 @@
+{
+  "CustomApplication": {
+    "Name": "Custom Demo App",
+    "Version": "2.0.0",
+    "Environment": "Production",
+    "Features": {
+      "Analytics": true,
+      "Monitoring": true,
+      "Debugging": false
+    },
+    "Thresholds": {
+      "MaxUsers": 10000,
+      "MaxConnections": 500,
+      "WarningLevel": 80.0
+    }
+  }
+}

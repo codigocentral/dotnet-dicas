@@ -1,0 +1,57 @@
+@inject DataService DataService
+
+<div class="optimized-components">
+    <div class="mb-3">
+        <label for="itemCount">Number of Items:</label>
+        <input id="itemCount" type="range" min="10" max="1000" step="10" 
+               @bind="itemCount" @bind:event="oninput" class="form-range" />
+        <span class="ms-2">@itemCount items</span>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h6>❌ Unoptimized Components</h6>
+            <div class="component-container">
+                @for (int i = 0; i < itemCount; i++)
+                {
+                    var item = GetItem(i);
+                    <UnoptimizedComponent Item="@item" @key="@($"unopt-{item.Id}")" />
+                }
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h6>✅ Optimized Components</h6>
+            <div class="component-container">
+                @for (int i = 0; i < itemCount; i++)
+                {
+                    var item = GetItem(i);
+                    <OptimizedComponent Item="@item" @key="@($"opt-{item.Id}")" />
+                }
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-3 alert alert-warning">
+        <strong>💡 Dica:</strong> Os componentes otimizados implementam 
+        <code>ShouldRender</code> e usam <code>@@key</code> para evitar 
+        re-renderizações desnecessárias.
+    </div>
+</div>
+
+<style>
+    .component-container {
+        height: 300px;
+        overflow-y: auto;
+        border: 1px solid #dee2e6;
+        border-radius: 0.375rem;
+        padding: 0.5rem;
+    }
+</style>
+
+@code {
+    private int itemCount = 100;
+    
+    private ListItem GetItem(int index) => 
+        DataService.GetItem(index);
+}

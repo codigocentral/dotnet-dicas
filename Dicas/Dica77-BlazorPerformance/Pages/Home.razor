@@ -1,0 +1,55 @@
+@page "/"
+
+<PageTitle>Dica 77: Blazor Performance</PageTitle>
+
+<h1>🚀 Blazor Performance Optimization</h1>
+
+<div class="alert alert-info">
+    <h4>📊 Demonstração de Técnicas de Performance</h4>
+    <p>Esta aplicação demonstra várias técnicas para otimizar a performance em Blazor WebAssembly:</p>
+    <ul>
+        <li><strong>Virtualization</strong> - Renderização otimizada de listas grandes</li>
+        <li><strong>Prerendering</strong> - Carregamento mais rápido</li>
+        <li><strong>Component Memoization</strong> - Evita re-renderizações desnecessárias</li>
+        <li><strong>AOT Compilation</strong> - Compilação antecipada para melhor performance</li>
+        <li><strong>Lazy Loading</strong> - Carregamento sob demanda</li>
+        <li><strong>Service Worker</strong> - Cache offline</li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>📊 Performance Metrics</h5>
+            </div>
+            <div class="card-body">
+                <PerformanceDisplay />
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>📋 Virtualized List</h5>
+            </div>
+            <div class="card-body">
+                <VirtualizedList />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>🎯 Optimized Components</h5>
+            </div>
+            <div class="card-body">
+                <OptimizedComponents />
+            </div>
+        </div>
+    </div>
+</div>

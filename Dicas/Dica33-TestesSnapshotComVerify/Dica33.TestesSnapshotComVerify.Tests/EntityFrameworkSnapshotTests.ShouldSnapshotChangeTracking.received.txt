@@ -1,0 +1,46 @@
+﻿[
+  {
+    EntityType: Product,
+    State: Added,
+    CurrentValues: {
+      Category: Electronics,
+      Name: New Product,
+      Price: 299.99
+    }
+  },
+  {
+    EntityType: Order,
+    State: Added,
+    CurrentValues: {
+      Status: ,
+      TotalAmount: 299.99,
+      UserId: 1,
+      UserId1: 0
+    }
+  },
+  {
+    EntityType: User,
+    State: Modified,
+    OriginalValues: {
+      Email: joao@gmail.com,
+      Name: João Silva
+    },
+    CurrentValues: {
+      Email: updated@email.com,
+      IsActive: true,
+      Name: Updated Name
+    },
+    ModifiedProperties: [
+      Email,
+      Name
+    ]
+  },
+  {
+    EntityType: Dictionary`2,
+    State: Added,
+    CurrentValues: {
+      OrderId: 3,
+      ProductsId: 4
+    }
+  }
+]

@@ -1,0 +1,40 @@
+﻿
+<div class="dashboard-widget" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 16px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div class="widget-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+        <h3 style="margin: 0; color: #333;">Vendas do Mês</h3>
+        <select style="padding: 4px 8px; border: 1px solid #ddd; border-radius: 4px;">
+            <option>Janeiro 2024</option>
+            <option>Dezembro 2023</option>
+            <option>Novembro 2023</option>
+        </select>
+    </div>
+    
+    <div class="widget-content">
+        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px;">
+            <div class="stat-item" style="text-align: center; padding: 16px; background: #f8f9fa; border-radius: 4px;">
+                <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #2ecc71;">R$ 45.670</div>
+                <div class="stat-label" style="color: #666; font-size: 14px;">Receita Total</div>
+            </div>
+            <div class="stat-item" style="text-align: center; padding: 16px; background: #f8f9fa; border-radius: 4px;">
+                <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #3498db;">156</div>
+                <div class="stat-label" style="color: #666; font-size: 14px;">Pedidos</div>
+            </div>
+            <div class="stat-item" style="text-align: center; padding: 16px; background: #f8f9fa; border-radius: 4px;">
+                <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #e74c3c;">R$ 293</div>
+                <div class="stat-label" style="color: #666; font-size: 14px;">Ticket Médio</div>
+            </div>
+            <div class="stat-item" style="text-align: center; padding: 16px; background: #f8f9fa; border-radius: 4px;">
+                <div class="stat-value" style="font-size: 24px; font-weight: bold; color: #f39c12;">89%</div>
+                <div class="stat-label" style="color: #666; font-size: 14px;">Taxa Conversão</div>
+            </div>
+        </div>
+        
+        <div class="chart-area" style="height: 200px; background: linear-gradient(45deg, #e3f2fd, #f3e5f5); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: #666;">
+            <span>[Área do Gráfico - Vendas por Dia]</span>
+        </div>
+    </div>
+    
+    <div class="widget-footer" style="margin-top: 20px; padding-top: 10px; border-top: 1px solid #eee; font-size: 12px; color: #999; text-align: right;">
+        Última atualização: há 5 minutos
+    </div>
+</div>

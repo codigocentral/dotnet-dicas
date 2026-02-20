@@ -1,0 +1,30 @@
+﻿{
+  Success: true,
+  Data: {
+    User: {
+      Id: 1,
+      Name: João Silva,
+      Email: joao@email.com,
+      Profile: {
+        IsActive: true,
+        LastLogin: DateTimeOffset_1,
+        Preferences: {
+          Language: pt-BR,
+          Theme: dark,
+          Notifications: true
+        }
+      }
+    },
+    Statistics: {
+      TotalOrders: 5,
+      TotalSpent: 1250.00,
+      AverageOrderValue: 250.00,
+      FavoriteCategory: Electronics
+    }
+  },
+  Meta: {
+    Timestamp: {Scrubbed},
+    Version: 1.0,
+    RequestId: {Scrubbed}
+  }
+}

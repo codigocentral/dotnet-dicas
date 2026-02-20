@@ -1,0 +1,55 @@
+﻿{
+  Data: [
+    {
+      Id: 1,
+      Name: Produto A,
+      Price: 100.00
+    },
+    {
+      Id: 2,
+      Name: Produto B,
+      Price: 200.00
+    },
+    {
+      Id: 3,
+      Name: Produto C,
+      Price: 300.00
+    },
+    {
+      Id: 4,
+      Name: Produto D,
+      Price: 400.00
+    },
+    {
+      Id: 5,
+      Name: Produto E,
+      Price: 500.00
+    }
+  ],
+  Pagination: {
+    CurrentPage: 1,
+    PageSize: 5,
+    TotalItems: 50,
+    TotalPages: 10,
+    HasPrevious: false,
+    HasNext: true,
+    Links: {
+      First: /api/products?page=1&size=5,
+      Current: /api/products?page=1&size=5,
+      Next: /api/products?page=2&size=5,
+      Last: /api/products?page=10&size=5
+    }
+  },
+  Meta: {
+    Query: {
+      Filters: {
+        Category: Electronics,
+        MinPrice: 50.00
+      },
+      Sort: price_asc,
+      Search: 
+    },
+    ExecutionTime: {Scrubbed},
+    CacheHit: false
+  }
+}

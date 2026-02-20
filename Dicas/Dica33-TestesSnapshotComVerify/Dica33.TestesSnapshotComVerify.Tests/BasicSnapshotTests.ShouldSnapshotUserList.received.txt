@@ -1,0 +1,23 @@
+﻿[
+  {
+    Id: 1,
+    Name: Ana Costa,
+    Email: ana@email.com,
+    IsActive: true,
+    CreatedAt: DateTime_1
+  },
+  {
+    Id: 2,
+    Name: Carlos Santos,
+    Email: carlos@email.com,
+    IsActive: false,
+    CreatedAt: DateTime_2
+  },
+  {
+    Id: 3,
+    Name: Maria Silva,
+    Email: maria@email.com,
+    IsActive: true,
+    CreatedAt: DateTime_3
+  }
+]

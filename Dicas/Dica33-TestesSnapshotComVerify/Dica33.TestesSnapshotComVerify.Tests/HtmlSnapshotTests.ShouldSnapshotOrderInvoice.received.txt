@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nota Fiscal - Pedido #1001</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 20px; }
+        .company-name { font-size: 24px; font-weight: bold; }
+        .invoice-info { margin: 20px 0; }
+        .customer-info { margin: 20px 0; }
+        .items-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .items-table th, .items-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .items-table th { background-color: #f2f2f2; }
+        .total { font-weight: bold; font-size: 18px; text-align: right; }
+        .footer { margin-top: 40px; font-size: 12px; color: #666; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="company-name">E-Commerce Ltda</div>
+        <div>CNPJ: 12.345.678/0001-90</div>
+        <div>Rua das Empresas, 123 - São Paulo, SP</div>
+    </div>
+    
+    <div class="invoice-info">
+        <h2>Nota Fiscal Eletrônica</h2>
+        <p><strong>Número:</strong> 000.001.001</p>
+        <p><strong>Série:</strong> 1</p>
+        <p><strong>Data de Emissão:</strong> 15/01/2024</p>
+        <p><strong>Pedido:</strong> #1001</p>
+    </div>
+    
+    <div class="customer-info">
+        <h3>Dados do Cliente</h3>
+        <p><strong>Nome:</strong> João Silva</p>
+        <p><strong>CPF:</strong> 123.456.789-00</p>
+        <p><strong>Endereço:</strong> Rua das Flores, 456 - São Paulo, SP - 01234-567</p>
+    </div>
+    
+    <table class="items-table">
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+                <th>Valor Unitário</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Smartphone Samsung Galaxy</td>
+                <td>1</td>
+                <td>R$ 1.299,99</td>
+                <td>R$ 1.299,99</td>
+            </tr>
+            <tr>
+                <td>Película Protetora</td>
+                <td>2</td>
+                <td>R$ 25,00</td>
+                <td>R$ 50,00</td>
+            </tr>
+            <tr>
+                <td>Frete Expresso</td>
+                <td>1</td>
+                <td>R$ 20,00</td>
+                <td>R$ 20,00</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="total">
+        <p>Subtotal: R$ 1.369,99</p>
+        <p>Desconto: R$ 50,00</p>
+        <p><strong>Total: R$ 1.319,99</strong></p>
+    </div>
+    
+    <div class="footer">
+        <p>Esta é uma representação simplificada da Nota Fiscal Eletrônica.</p>
+    </div>
+</body>
+</html>

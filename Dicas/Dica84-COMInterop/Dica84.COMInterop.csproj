@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Dica84.COMInterop</RootNamespace>
+    
+    <!-- Enable COM Interop support -->
+    <COMReference>true</COMReference>
+    <UseComHost>true</UseComHost>
+    
+    <!-- Platform-specific -->
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    
+    <!-- COM Interop specific -->
+    <ComVisible>true</ComVisible>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
+  </ItemGroup>
+
+  <!-- COM References (quando disponível) -->
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <!-- Shell32 for Windows Shell integration -->
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+</Project>

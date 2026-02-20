@@ -1,0 +1,30 @@
+﻿{
+  OrderId: 1001,
+  CustomerName: João Silva,
+  TotalItems: 3,
+  TotalAmount: 2600.00,
+  Discount: 100.00,
+  FinalAmount: 2500.00,
+  PaymentMethod: Credit Card,
+  ShippingAddress: {
+    Street: Rua das Flores, 123,
+    City: São Paulo,
+    State: SP,
+    ZipCode: 01234-567,
+    Country: Brasil
+  },
+  Items: [
+    {
+      ProductName: Laptop,
+      Quantity: 1,
+      UnitPrice: 2500.00,
+      Subtotal: 2500.00
+    },
+    {
+      ProductName: Mouse,
+      Quantity: 2,
+      UnitPrice: 50.00,
+      Subtotal: 100.00
+    }
+  ]
+}

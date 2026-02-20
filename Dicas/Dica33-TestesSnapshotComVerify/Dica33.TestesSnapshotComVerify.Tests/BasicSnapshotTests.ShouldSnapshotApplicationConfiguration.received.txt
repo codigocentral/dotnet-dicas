@@ -1,0 +1,18 @@
+﻿{
+  Database: {
+    ConnectionString: Server=localhost;Database=ProductionDB,
+    CommandTimeout: 30,
+    EnableRetry: true
+  },
+  Features: {
+    EnableCaching: true,
+    EnableDebugMode: false,
+    EnableLogging: true,
+    EnableMetrics: true
+  },
+  ApiSettings: {
+    BaseUrl: https://api.production.com,
+    Timeout: 00:00:30,
+    MaxRetries: 3
+  }
+}

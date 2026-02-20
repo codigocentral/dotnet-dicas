@@ -1,0 +1,26 @@
+﻿[
+  {
+    Id: 1,
+    Name: Laptop Dell,
+    Price: 2500.00,
+    Category: Electronics
+  },
+  {
+    Id: 2,
+    Name: Mouse Logitech,
+    Price: 50.00,
+    Category: Electronics
+  },
+  {
+    Id: 3,
+    Name: Livro Clean Code,
+    Price: 80.00,
+    Category: Books
+  },
+  {
+    Id: 4,
+    Name: Cadeira Ergonômica,
+    Price: 800.00,
+    Category: Furniture
+  }
+]

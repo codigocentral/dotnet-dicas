@@ -1,0 +1,59 @@
+﻿{
+  AuditId: {Scrubbed},
+  Timestamp: {Scrubbed},
+  Action: user_data_export,
+  Actor: {
+    UserId: 123,
+    Email: admin@company.com,
+    Role: DataProtectionOfficer,
+    SessionId: {Scrubbed},
+    IpAddress: 10.0.1.50
+  },
+  Target: {
+    UserId: 456,
+    Email: customer@email.com,
+    DataRequested: [
+      personal_information,
+      order_history,
+      payment_methods,
+      browsing_history
+    ]
+  },
+  Result: {
+    Success: true,
+    ExportId: {Scrubbed},
+    FilePath: {Scrubbed},
+    FileSize: 2547836,
+    ExpiresAt: {Scrubbed},
+    DownloadToken: {Scrubbed}
+  },
+  Compliance: {
+    GDPRCompliant: true,
+    LGPDCompliant: true,
+    RetentionPeriod: {Scrubbed},
+    EncryptionUsed: AES-256-GCM,
+    AccessLog: [
+      {
+        Time: {Scrubbed},
+        Action: file_created,
+        User: system
+      },
+      {
+        Time: {Scrubbed},
+        Action: encryption_applied,
+        User: system
+      },
+      {
+        Time: {Scrubbed},
+        Action: token_generated,
+        User: system
+      }
+    ]
+  },
+  Metadata: {
+    ProcessingTime: {Scrubbed},
+    ServerInstance: {Scrubbed},
+    RequestCorrelationId: {Scrubbed},
+    BatchJobId: {Scrubbed}
+  }
+}

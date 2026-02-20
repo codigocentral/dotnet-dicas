@@ -1,0 +1,16 @@
+﻿{
+  Id: {Scrubbed},
+  Timestamp: {Scrubbed},
+  Level: INFO,
+  Message: User logged in successfully,
+  UserId: 123,
+  SessionId: {Scrubbed},
+  RequestId: {Scrubbed},
+  Properties: {
+    DeviceFingerprint: {Scrubbed},
+    IpAddress: 192.168.1.100,
+    LoginAttempt: 1,
+    PreviousLogin: {Scrubbed},
+    UserAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+  }
+}

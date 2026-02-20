@@ -1,0 +1,59 @@
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@inject DataService DataService
+@implements IAsyncDisposable
+
+<div class="virtualized-container" style="height: 400px; overflow-y: auto;">
+    <Virtualize Context="item" ItemsProvider="@LoadItems" ItemSize="50">
+        <ItemContent>
+            <div class="list-item p-2 border-bottom">
+                <div class="d-flex justify-content-between">
+                    <strong>Item #@item.Id</strong>
+                    <span class="text-muted">@item.Timestamp.ToString("HH:mm:ss")</span>
+                </div>
+                <div class="text-muted">@item.Description</div>
+            </div>
+        </ItemContent>
+        <Placeholder>
+            <div class="placeholder-item p-2 border-bottom">
+                <div class="placeholder-glow">
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-3 float-end"></span>
+                </div>
+                <div class="placeholder-glow mt-1">
+                    <span class="placeholder col-8"></span>
+                </div>
+            </div>
+        </Placeholder>
+    </Virtualize>
+</div>
+
+<div class="mt-3">
+    <p class="text-muted">
+        <i class="bi bi-info-circle"></i>
+        <strong>Virtualização:</strong> Apenas os itens visíveis são renderizados, 
+        permitindo lidar com milhões de itens sem impacto na performance.
+    </p>
+</div>
+
+@code {
+    private readonly CancellationTokenSource _cancellationTokenSource = new();
+
+    private async ValueTask<ItemsProviderResult<ListItem>> LoadItems(
+        ItemsProviderRequest request)
+    {
+        // Simula carregamento assíncrono de dados
+        await Task.Delay(50, _cancellationTokenSource.Token);
+        
+        var items = DataService.GetVirtualizedItems(
+            request.StartIndex, 
+            request.Count);
+        
+        return new ItemsProviderResult<ListItem>(items, 1_000_000);
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        await _cancellationTokenSource.CancelAsync();
+        _cancellationTokenSource.Dispose();
+    }
+}

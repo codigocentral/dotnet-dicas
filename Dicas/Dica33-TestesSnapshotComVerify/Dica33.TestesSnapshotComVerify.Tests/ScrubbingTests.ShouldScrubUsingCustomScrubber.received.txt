@@ -1,0 +1,37 @@
+﻿{
+  RequestId: {Scrubbed},
+  Timestamp: {Scrubbed},
+  Data: {
+    Users: [
+      {
+        Id: 1,
+        Email: user1@domain.com,
+        Profile: {
+          IpAddress: 192.168.1.100,
+          LastSeen: {Scrubbed},
+          DeviceId: device_xyz789
+        }
+      },
+      {
+        Id: 2,
+        Email: user2@domain.com,
+        Profile: {
+          IpAddress: 10.0.0.50,
+          LastSeen: {Scrubbed},
+          DeviceId: device_abc123
+        }
+      }
+    ]
+  },
+  Debug: {
+    ExecutionTime: {Scrubbed},
+    SqlQueries: [
+      ,
+      
+    ],
+    CacheHits: {
+      user:1: ,
+      user:2: 
+    }
+  }
+}

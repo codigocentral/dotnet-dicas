@@ -1,0 +1,307 @@
+﻿[
+  {
+    Name: Dictionary`2,
+    TableName: OrderProducts,
+    Properties: [
+      {
+        Name: OrderId,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: true
+      },
+      {
+        Name: ProductsId,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: true
+      }
+    ],
+    Indexes: [
+      {
+        Properties: [
+          ProductsId
+        ],
+        IsUnique: false
+      }
+    ],
+    ForeignKeys: [
+      {
+        Properties: [
+          OrderId
+        ],
+        PrincipalEntityType: Order,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      },
+      {
+        Properties: [
+          ProductsId
+        ],
+        PrincipalEntityType: Product,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      }
+    ]
+  },
+  {
+    Name: Order,
+    TableName: Order,
+    Properties: [
+      {
+        Name: CreatedAt,
+        Type: DateTime,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Id,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: false
+      },
+      {
+        Name: OrderDate,
+        Type: DateTime,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Status,
+        Type: String,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: TotalAmount,
+        Type: Decimal,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: UserId,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: true
+      },
+      {
+        Name: UserId1,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: true
+      }
+    ],
+    Indexes: [
+      {
+        Properties: [
+          UserId
+        ],
+        IsUnique: false
+      },
+      {
+        Properties: [
+          UserId1
+        ],
+        IsUnique: false
+      }
+    ],
+    ForeignKeys: [
+      {
+        Properties: [
+          UserId
+        ],
+        PrincipalEntityType: User,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      },
+      {
+        Properties: [
+          UserId1
+        ],
+        PrincipalEntityType: User,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      }
+    ]
+  },
+  {
+    Name: OrderItem,
+    TableName: OrderItem,
+    Properties: [
+      {
+        Name: Id,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: false
+      },
+      {
+        Name: OrderId,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: true
+      },
+      {
+        Name: ProductId,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: true
+      },
+      {
+        Name: Quantity,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: UnitPrice,
+        Type: Decimal,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      }
+    ],
+    Indexes: [
+      {
+        Properties: [
+          OrderId
+        ],
+        IsUnique: false
+      },
+      {
+        Properties: [
+          ProductId
+        ],
+        IsUnique: false
+      }
+    ],
+    ForeignKeys: [
+      {
+        Properties: [
+          OrderId
+        ],
+        PrincipalEntityType: Order,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      },
+      {
+        Properties: [
+          ProductId
+        ],
+        PrincipalEntityType: Product,
+        PrincipalProperties: [
+          Id
+        ],
+        DeleteBehavior: Cascade
+      }
+    ]
+  },
+  {
+    Name: Product,
+    TableName: Product,
+    Properties: [
+      {
+        Name: Category,
+        Type: String,
+        IsNullable: false,
+        MaxLength: 100,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Id,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: false
+      },
+      {
+        Name: Name,
+        Type: String,
+        IsNullable: false,
+        MaxLength: 200,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Price,
+        Type: Decimal,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      }
+    ]
+  },
+  {
+    Name: User,
+    TableName: User,
+    Properties: [
+      {
+        Name: CreatedAt,
+        Type: DateTime,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Email,
+        Type: String,
+        IsNullable: false,
+        MaxLength: 200,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Id,
+        Type: Int32,
+        IsNullable: false,
+        IsKey: true,
+        IsForeignKey: false
+      },
+      {
+        Name: IsActive,
+        Type: Boolean,
+        IsNullable: false,
+        IsKey: false,
+        IsForeignKey: false
+      },
+      {
+        Name: Name,
+        Type: String,
+        IsNullable: false,
+        MaxLength: 200,
+        IsKey: false,
+        IsForeignKey: false
+      }
+    ],
+    Indexes: [
+      {
+        Properties: [
+          Email
+        ],
+        IsUnique: true
+      }
+    ]
+  }
+]

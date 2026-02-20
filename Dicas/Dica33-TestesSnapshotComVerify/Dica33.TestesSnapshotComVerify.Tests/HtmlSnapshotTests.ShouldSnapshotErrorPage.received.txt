@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Erro 404 - Página não encontrada</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-container {
+            text-align: center;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .error-message {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 20px 0;
+            font-weight: 300;
+        }
+        .error-description {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 30px 0;
+            line-height: 1.6;
+        }
+        .error-actions {
+            margin-top: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 0 10px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">🚫</div>
+        <div class="error-code">404</div>
+        <div class="error-message">Página não encontrada</div>
+        <div class="error-description">
+            A página que você está procurando não foi encontrada. Ela pode ter sido movida, removida ou você digitou o endereço incorretamente.
+        </div>
+        <div class="error-actions">
+            <a href="/" class="btn btn-primary">Voltar ao Início</a>
+            <a href="/contato" class="btn btn-secondary">Contato</a>
+        </div>
+    </div>
+</body>
+</html>

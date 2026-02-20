@@ -1,0 +1,21 @@
+<div class="component-wrapper" @key="@($"opt-{Item.Id}")">
+    <div class="item-card p-2 mb-1 border rounded bg-light">
+        <div class="d-flex justify-content-between">
+            <span>@Item.Description</span>
+            <small class="text-muted">Optimized - @Item.Timestamp.ToString("HH:mm:ss")</small>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public ListItem Item { get; set; } = default!;
+    private ListItem? _previousItem;
+
+    protected override bool ShouldRender()
+    {
+        var shouldRender = _previousItem?.Id != Item.Id || 
+                          _previousItem?.Description != Item.Description;
+        _previousItem = Item;
+        return shouldRender;
+    }
+}

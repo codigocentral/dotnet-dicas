@@ -1,0 +1,29 @@
+﻿{
+  Success: false,
+  Error: {
+    Code: VALIDATION_ERROR,
+    Message: Os dados fornecidos são inválidos,
+    Details: [
+      {
+        Field: Email,
+        Message: Email é obrigatório
+      },
+      {
+        Field: Password,
+        Message: Senha deve ter pelo menos 8 caracteres
+      },
+      {
+        Field: Age,
+        Message: Idade deve ser maior que 18
+      }
+    ],
+    Timestamp: DateTime_1,
+    RequestId: {Scrubbed},
+    TraceId: {Scrubbed}
+  },
+  Meta: {
+    ApiVersion: 2.1,
+    Documentation: https://api.docs.com/errors,
+    SupportContact: support@company.com
+  }
+}

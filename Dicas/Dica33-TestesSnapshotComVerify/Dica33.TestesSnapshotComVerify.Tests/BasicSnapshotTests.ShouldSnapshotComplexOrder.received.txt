@@ -1,0 +1,42 @@
+﻿{
+  Id: 1001,
+  UserId: 1,
+  User: {
+    Id: 1,
+    Name: João Silva,
+    Email: joao@email.com,
+    IsActive: true,
+    CreatedAt: DateTime_1
+  },
+  Items: [
+    {
+      Id: 1,
+      ProductId: 1,
+      Product: {
+        Id: 1,
+        Name: Laptop,
+        Price: 2500.00,
+        Category: Electronics
+      },
+      Quantity: 1,
+      UnitPrice: 2500.00,
+      Subtotal: 2500.00
+    },
+    {
+      Id: 2,
+      ProductId: 2,
+      Product: {
+        Id: 2,
+        Name: Mouse,
+        Price: 50.00,
+        Category: Electronics
+      },
+      Quantity: 2,
+      UnitPrice: 50.00,
+      Subtotal: 100.00
+    }
+  ],
+  CreatedAt: DateTime_2,
+  Status: Confirmed,
+  Total: 2600.00
+}

@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+option csharp_namespace = "Dica56_gRPC";
+
+package products;
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+// The product service definition.
+service ProductService {
+  // Get a single product
+  rpc GetProduct (GetProductRequest) returns (Product);
+  
+  // Get all products
+  rpc GetProducts (google.protobuf.Empty) returns (ProductList);
+  
+  // Create a new product
+  rpc CreateProduct (CreateProductRequest) returns (Product);
+  
+  // Update an existing product
+  rpc UpdateProduct (UpdateProductRequest) returns (Product);
+  
+  // Delete a product
+  rpc DeleteProduct (DeleteProductRequest) returns (google.protobuf.Empty);
+  
+  // Search products
+  rpc SearchProducts (SearchProductsRequest) returns (ProductList);
+}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string category = 5;
+  int32 stock_quantity = 6;
+  google.protobuf.Timestamp created_at = 7;
+  google.protobuf.Timestamp updated_at = 8;
+  bool is_active = 9;
+  repeated string tags = 10;
+}
+
+message ProductList {
+  repeated Product products = 1;
+  int32 total_count = 2;
+}
+
+message GetProductRequest {
+  int32 id = 1;
+}
+
+message CreateProductRequest {
+  string name = 1;
+  string description = 2;
+  double price = 3;
+  string category = 4;
+  int32 stock_quantity = 5;
+  repeated string tags = 6;
+}
+
+message UpdateProductRequest {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+  double price = 4;
+  string category = 5;
+  int32 stock_quantity = 6;
+  repeated string tags = 7;
+  bool is_active = 8;
+}
+
+message DeleteProductRequest {
+  int32 id = 1;
+}
+
+message SearchProductsRequest {
+  string query = 1;
+  string category = 2;
+  double min_price = 3;
+  double max_price = 4;
+  int32 page = 5;
+  int32 page_size = 6;
+}
